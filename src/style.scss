@@ -33,7 +33,7 @@ body {
 
   &__content {
     &-image {
-      height: 100%;
+      height: 350px;
       width: 100%;
       overflow: hidden;
 
@@ -49,7 +49,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 15px;
+      padding-top: 25px;
       font-size: 25px;
     }
   }
