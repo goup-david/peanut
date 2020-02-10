@@ -8,7 +8,7 @@ const PolaroidItem = ({ data }) => {
     <div className="polaroid one" style={sty}>
       <div className="polaroid__content">
         <div className="polaroid__content-image">
-          <Img className="" fixed={data.node.childImageSharp.fixed} />
+          <Img fluid={data.node.childImageSharp.fluid} />
         </div>
         <div className="polaroid__content-caption">
           <p>Just me</p>
