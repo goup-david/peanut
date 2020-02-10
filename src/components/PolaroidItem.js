@@ -10,9 +10,9 @@ const PolaroidItem = ({ data }) => {
         <div className="polaroid__content-image">
           <Img className="" fixed={data.node.childImageSharp.fixed} />
         </div>
-        {/* <div className="polaroid__content-caption">
-          <p>the good ol' boy</p>
-        </div> */}
+        <div className="polaroid__content-caption">
+          <p>Just me</p>
+        </div>
       </div>
     </div>
   )
