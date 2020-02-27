@@ -20,6 +20,14 @@ module.exports = {
         path: `${__dirname}/src/uploads`,
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://whispering-reef-09572.herokuapp.com`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`post`],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,

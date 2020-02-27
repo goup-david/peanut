@@ -7,7 +7,7 @@ import PolaroidItem from "../components/PolaroidItem"
 import "../style.scss"
 
 const IndexPage = props => {
-  const data = props.data.allFile.edges
+  const data = props.data.allStrapiPost.edges
 
   return (
     <Layout>
@@ -27,13 +27,18 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "uploads" } }) {
+    allStrapiPost {
       edges {
         node {
           id
-          childImageSharp {
-            fluid(maxWidth: 400, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
+          Title
+          created_at
+          updated_at
+          Image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
             }
           }
         }
