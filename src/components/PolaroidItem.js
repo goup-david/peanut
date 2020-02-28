@@ -8,10 +8,10 @@ const PolaroidItem = ({ data }) => {
     <div className="polaroid one" style={sty}>
       <div className="polaroid__content">
         <div className="polaroid__content-image">
-          <Img fluid={data.node.Image.childImageSharp.fluid} />
+          <Img fluid={data.node.image.childImageSharp.fluid} />
         </div>
         <div className="polaroid__content-caption">
-          <p>{data.node.Title}</p>
+          <p>{data.node.title}</p>
         </div>
       </div>
     </div>

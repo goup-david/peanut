@@ -31,10 +31,10 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          Title
+          title
           created_at
           updated_at
-          Image {
+          image {
             childImageSharp {
               fluid(maxWidth: 400, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
