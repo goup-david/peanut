@@ -41,7 +41,7 @@ export const pageQuery = graphql`
           }
           fluid(maxWidth: 500, quality: 100) {
             # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
