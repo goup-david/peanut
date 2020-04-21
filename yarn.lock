@@ -2399,7 +2399,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.5.0, bluebird@^3.5.5, bluebird@^3.7.2:
+bluebird@^3.3.3, bluebird@^3.5.0, bluebird@^3.5.5, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -4805,6 +4805,11 @@ exif-parser@^0.1.12:
   resolved "https://registry.yarnpkg.com/exif-parser/-/exif-parser-0.1.12.tgz#58a9d2d72c02c1f6f02a0ef4a9166272b7760922"
   integrity sha1-WKnS1ywCwfbwKg70qRZicrd2CSI=
 
+exif-reader@^1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/exif-reader/-/exif-reader-1.0.3.tgz#8eb63f878aeb49ec89bd5b7be10e393db78c3c2e"
+  integrity sha512-tWMBj1+9jUSibgR/kv/GQ/fkR0biaN9GEZ5iPdf7jFeH//d2bSzgPoaWf1OfMv4MXFD4upwvpCCyeMvSyLWSfA==
+
 expand-brackets@^0.1.4:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/expand-brackets/-/expand-brackets-0.1.5.tgz#df07284e342a807cd733ac5af72411e581d1177b"
@@ -4973,6 +4978,14 @@ fast-deep-equal@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz#545145077c501491e33b15ec408c294376e94ae4"
   integrity sha512-8UEa58QDLauDNfpbrX55Q9jrGHThw2ZMdOky5Gl1CDtVeJDPVrG4Jxx1N8jw2gkWaff5UUuX1KJd+9zGe2B+ZA==
+
+fast-exif@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/fast-exif/-/fast-exif-1.0.1.tgz#17d1d04d6493e63d4b6c0b35c6b0bdbf51e396ff"
+  integrity sha1-F9HQTWST5j1LbAs1xrC9v1Hjlv8=
+  dependencies:
+    bluebird "^3.3.3"
+    exif-reader "^1.0.0"
 
 fast-glob@^2.0.2:
   version "2.2.7"
@@ -5589,6 +5602,14 @@ gatsby-plugin-sass@^2.1.28:
   dependencies:
     "@babel/runtime" "^7.7.6"
     sass-loader "^7.3.1"
+
+gatsby-plugin-sharp-exif@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp-exif/-/gatsby-plugin-sharp-exif-1.0.1.tgz#3ca2badd8b8a0efcd8313640c9b0ab6b72311a86"
+  integrity sha512-tLGwUfL2pT+ofxLEPwJFanm8tMqnX2H59cddR9tBpNvMegQzwutlxDzd+gm0qi/q0FVSG9SdSbwbXfRnjZVpMg==
+  dependencies:
+    "@babel/runtime" "^7.7.4"
+    fast-exif "^1.0.1"
 
 gatsby-plugin-sharp@^2.4.5:
   version "2.4.5"
@@ -10227,6 +10248,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-moment@^0.9.7:
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.9.7.tgz#ca570466595b1aa4f7619e62da18b3bb2de8b6f3"
+  integrity sha512-ifzUrUGF6KRsUN2pRG5k56kO0mJBr8kRkWb0wNvtFIsBIxOuPxhUpL1YlXwpbQCbHq23hUu6A0VEk64HsFxk9g==
 
 react-reconciler@^0.24.0:
   version "0.24.0"

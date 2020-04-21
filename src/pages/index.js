@@ -7,7 +7,7 @@ import PolaroidItem from "../components/PolaroidItem"
 import "../style.scss"
 
 const IndexPage = props => {
-  const data = props.data.allStrapiPost.edges
+  const data = props.data.allImageSharp.edges
 
   return (
     <Layout>
@@ -27,19 +27,21 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allStrapiPost {
+    allImageSharp(
+      sort: { fields: fields___exif___meta___dateTaken, order: ASC }
+    ) {
       edges {
         node {
-          id
-          title
-          created_at
-          updated_at
-          image {
-            childImageSharp {
-              fluid(maxWidth: 400, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+          fields {
+            exif {
+              meta {
+                dateTaken(difference: "", formatString: "")
               }
             }
+          }
+          fluid(maxWidth: 500, quality: 100) {
+            # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
