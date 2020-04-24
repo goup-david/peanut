@@ -15,7 +15,7 @@ const PolaroidItem = ({ data }) => {
         <div className="polaroid__content-caption">
           {data.node.fields && (
             <Moment
-              duration="2019-04-24T23:59-0000"
+              duration="2019-04-24T22:59-0000"
               date={data.node.fields.exif.meta.dateTaken}
             />
           )}
